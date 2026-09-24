@@ -1,0 +1,67 @@
+{
+  "pages": {
+    "/_app": [
+      "static/chunks/151i_next_dist_compiled_1qd0doi._.js",
+      "static/chunks/151i_next_dist_shared_lib_1253uho._.js",
+      "static/chunks/151i_next_dist_client_1s4qxxp._.js",
+      "static/chunks/151i_next_dist_0ggsae1._.js",
+      "static/chunks/151i_next_app_174q7mn.js",
+      "static/chunks/[next]_entry_page-loader_ts_1wx_y-z._.js",
+      "static/chunks/151i_react-dom_12tmtzc._.js",
+      "static/chunks/151i_1g55h8v._.js",
+      "static/chunks/[root-of-the-server]__0z_vdum._.js",
+      "static/chunks/sna-app_pages__app_0du2_q-._.js",
+      "static/chunks/turbopack-sna-app_pages__app_00t-whl._.js"
+    ],
+    "/_error": [
+      "static/chunks/151i_next_dist_compiled_1qd0doi._.js",
+      "static/chunks/151i_next_dist_shared_lib_18efcw0._.js",
+      "static/chunks/151i_next_dist_client_1s4qxxp._.js",
+      "static/chunks/151i_next_dist_1io56qy._.js",
+      "static/chunks/[next]_entry_page-loader_ts_1klsxk0._.js",
+      "static/chunks/151i_react-dom_12tmtzc._.js",
+      "static/chunks/151i_1g55h8v._.js",
+      "static/chunks/[root-of-the-server]__1fnriz2._.js",
+      "static/chunks/sna-app_pages__error_0du2_q-._.js",
+      "static/chunks/turbopack-sna-app_pages__error_0amwhn0._.js"
+    ]
+  },
+  "devFiles": [],
+  "polyfillFiles": [
+    "static/chunks/151i_next_dist_build_polyfills_polyfill-nomodule.js"
+  ],
+  "lowPriorityFiles": [
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js",
+    "static/development/_clientMiddlewareManifest.js"
+  ],
+  "rootMainFiles": [
+    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_1u-qwn6._.js",
+    "static/chunks/151i_next_dist_compiled_next-devtools_index_1r7yc9u.js",
+    "static/chunks/151i_next_dist_compiled_react-dom_06je_75._.js",
+    "static/chunks/151i_next_dist_compiled_react-server-dom-turbopack_0kw92i1._.js",
+    "static/chunks/151i_next_dist_compiled_0s24ser._.js",
+    "static/chunks/151i_next_dist_client_1xyv7s3._.js",
+    "static/chunks/151i_next_dist_16_lrh5._.js",
+    "static/chunks/151i_@swc_helpers_cjs_1x2zfvb._.js",
+    "static/chunks/sna-app_1anvha4._.js",
+    "static/chunks/turbopack-sna-app_1k9_8_g._.js"
+  ],
+  "rootMainFilesTree": {
+    "/page": [
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_1u-qwn6._.js",
+      "static/chunks/151i_next_dist_compiled_next-devtools_index_1r7yc9u.js",
+      "static/chunks/151i_next_dist_compiled_react-dom_06je_75._.js",
+      "static/chunks/151i_next_dist_compiled_react-server-dom-turbopack_0kw92i1._.js",
+      "static/chunks/151i_next_dist_compiled_0s24ser._.js",
+      "static/chunks/151i_next_dist_client_1xyv7s3._.js",
+      "static/chunks/151i_next_dist_16_lrh5._.js",
+      "static/chunks/151i_@swc_helpers_cjs_1x2zfvb._.js",
+      "static/chunks/sna-app_1anvha4._.js",
+      "static/chunks/turbopack-sna-app_1k9_8_g._.js",
+      "static/chunks/sna-app_219uq1s._.js"
+    ]
+  },
+  "pagesChunkGroupBootstrapParams": {},
+  "chunkLoadingGlobal": "TURBOPACK"
+}

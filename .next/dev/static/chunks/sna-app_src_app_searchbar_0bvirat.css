@@ -1,0 +1,25 @@
+/* [project]/sna-app/src/app/searchbar.css [app-client] (css) */
+.main {
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+h1 {
+  color: #01013b;
+  margin: 10px;
+  font-size: 40px;
+}
+
+.search {
+  width: 30%;
+}
+
+ul li {
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=sna-app_src_app_searchbar_0bvirat.css.map*/
