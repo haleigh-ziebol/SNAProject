@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/halzi/Desktop/sna-app/src/app/searchbar.css"],"sourcesContent":[".main {\r\n    display: flex;\r\n    height: 100vh;\r\n    width: 100%;\r\n    align-items: center;\r\n    flex-direction: column;\r\n    row-gap: 20px;\r\n}\r\n\r\nh1 {\r\n    margin: 10px;\r\n    font-size: 40px;\r\n    color: rgb(1, 1, 59);\r\n}\r\n\r\n.search {\r\n    width: 30%;\r\n}\r\n\r\nul li {\r\n    font-size: 20px;\r\n}"],"names":[],"mappings":"AAAA;;;;;;;;;AASA;;;;;;AAMA;;;;AAIA"}}]
+}
