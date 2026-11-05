@@ -1,4 +1,4 @@
-import { db } from "../../../prisma/db";
+import { db } from "../../../../prisma/db";
 import { NextResponse } from 'next/server';
 
 export default function handler(req, res) {
@@ -9,10 +9,16 @@ export default function handler(req, res) {
   }
 }
 
-export async function GET(id) {
-  const plants = await getPlants(id)
+export async function GET(request, context) {
+  let id;
+  if (typeof request === 'string') {
+    id = request;
+  } else if (context?.params) {
+    const params = await context.params;
+    id = params?.id;
+  }
+  const plants = await getPlants(id);
   return NextResponse.json(plants);
-
 }
 
 async function getPlants(id) {
@@ -22,7 +28,7 @@ async function getPlants(id) {
     return {
       Response: snasForPlant,
     };
-  } catch (error: unknown) {
+  } catch (error) {
     const message = error instanceof Error ? error.message : 'Unknown database error';
     return {
       message: 'Database Error: Failed to fetch plants for this SNA.',

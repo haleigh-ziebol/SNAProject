@@ -1,0 +1,3 @@
+{
+  "/api/sna/[id]/route": "app/api/sna/[id]/route.js"
+}

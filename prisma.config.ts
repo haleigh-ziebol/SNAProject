@@ -1,7 +1,7 @@
-import { definePrismaConfig } from "prisma/config";
+import { defineConfig } from "prisma/config";
 import { defineConfig as ormConfig } from "@prisma/orm-postgres/config";
 
-export default definePrismaConfig({
+export default defineConfig({
   skills: {
     agents: ["claude", "cursor", "agents", "devin"],
   },
@@ -15,4 +15,4 @@ export default definePrismaConfig({
   composer: {
     configPath: "./prisma-composer.config.ts",
   },
-});
+} as any);

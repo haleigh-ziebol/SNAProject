@@ -15,12 +15,30 @@
     }
   ],
   "headers": [],
+  "onMatchHeaders": [],
   "rewrites": {
     "beforeFiles": [],
     "afterFiles": [],
     "fallback": []
   },
-  "dynamicRoutes": [],
+  "dynamicRoutes": [
+    {
+      "page": "/api/plant/[id]",
+      "regex": "^/api/plant/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/plant/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/sna/[id]",
+      "regex": "^/api/sna/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/sna/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
   "staticRoutes": [
     {
       "page": "/",
@@ -39,6 +57,18 @@
       "regex": "^/_not\\-found(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/api/plant",
+      "regex": "^/api/plant(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/plant(?:/)?$"
+    },
+    {
+      "page": "/api/sna",
+      "regex": "^/api/sna(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/sna(?:/)?$"
     }
   ],
   "dataRoutes": [],

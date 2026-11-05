@@ -1,5 +1,9 @@
 {
   "/_global-error/page": "app/_global-error/page.js",
   "/_not-found/page": "app/_not-found/page.js",
+  "/api/plant/[id]/route": "app/api/plant/[id]/route.js",
+  "/api/plant/route": "app/api/plant/route.js",
+  "/api/sna/[id]/route": "app/api/sna/[id]/route.js",
+  "/api/sna/route": "app/api/sna/route.js",
   "/page": "app/page.js"
 }

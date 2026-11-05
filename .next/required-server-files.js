@@ -20,6 +20,7 @@ self.__SERVER_FILES_MANIFEST={
       "jsx",
       "js"
     ],
+    "instrumentationClientInject": [],
     "poweredByHeader": true,
     "compress": true,
     "images": {
@@ -67,7 +68,8 @@ self.__SERVER_FILES_MANIFEST={
       "qualities": [
         75
       ],
-      "unoptimized": false
+      "unoptimized": false,
+      "customCacheHandler": false
     },
     "devIndicators": {
       "position": "bottom-left"
@@ -88,7 +90,10 @@ self.__SERVER_FILES_MANIFEST={
     "httpAgentOptions": {
       "keepAlive": true
     },
-    "logging": {},
+    "logging": {
+      "serverFunctions": true,
+      "browserToTerminal": "warn"
+    },
     "compiler": {},
     "expireTime": 31536000,
     "staticPageGenerationTimeout": 60,
@@ -101,7 +106,8 @@ self.__SERVER_FILES_MANIFEST={
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "/mnt/c/Users/halzi/Desktop",
+    "outputFileTracingRoot": "/mnt/c/Users/halzi/Desktop/sna-app",
+    "enablePrerenderSourceMaps": true,
     "cacheComponents": false,
     "cacheLife": {
       "default": {
@@ -142,6 +148,9 @@ self.__SERVER_FILES_MANIFEST={
     },
     "cacheHandlers": {},
     "experimental": {
+      "appNewScrollHandler": true,
+      "coldCacheBadge": false,
+      "devValidationWorker": true,
       "useSkewCookie": false,
       "cssChunking": true,
       "multiZoneDraftMode": false,
@@ -150,7 +159,16 @@ self.__SERVER_FILES_MANIFEST={
       "serverMinification": true,
       "linkNoTouchStart": false,
       "caseSensitiveRoutes": false,
+      "cachedNavigations": false,
       "dynamicOnHover": false,
+      "useOffline": false,
+      "varyParams": true,
+      "optimisticRouting": true,
+      "instrumentationClientRouterTransitionEvents": false,
+      "prefetchInlining": {
+        "maxSize": 2048,
+        "maxBundleSize": 10240
+      },
       "preloadEntriesOnStart": true,
       "clientRouterFilter": true,
       "clientRouterFilterRedirects": false,
@@ -161,16 +179,17 @@ self.__SERVER_FILES_MANIFEST={
       "cpus": 3,
       "memoryBasedWorkersCount": false,
       "imgOptConcurrency": null,
+      "imgOptOperationCache": null,
       "imgOptTimeoutInSeconds": 7,
       "imgOptMaxInputPixels": 268402689,
       "imgOptSequentialRead": null,
-      "imgOptSkipMetadata": null,
       "isrFlushToDisk": true,
       "workerThreads": false,
       "optimizeCss": false,
       "nextScriptWorkers": false,
       "scrollRestoration": false,
       "externalDir": false,
+      "devMemoryThresholdRestart": true,
       "disableOptimizedLoading": false,
       "gzipSize": true,
       "craCompat": false,
@@ -178,6 +197,7 @@ self.__SERVER_FILES_MANIFEST={
       "fullySpecified": false,
       "swcTraceProfiling": false,
       "forceSwcTransforms": false,
+      "requestInsights": false,
       "largePageDataBytes": 128000,
       "typedEnv": false,
       "parallelServerCompiles": false,
@@ -186,30 +206,34 @@ self.__SERVER_FILES_MANIFEST={
       "authInterrupts": false,
       "webpackMemoryOptimizations": false,
       "optimizeServerReact": true,
-      "viewTransition": false,
+      "strictRouteTypes": false,
+      "useTypeScriptCli": true,
       "removeUncaughtErrorAndRejectionListeners": false,
-      "validateRSCRequestHeaders": false,
+      "validateRSCRequestHeaders": true,
       "staleTimes": {
         "dynamic": 0,
         "static": 300
       },
-      "reactDebugChannel": false,
+      "reactDebugChannel": true,
       "serverComponentsHmrCache": true,
+      "serverComponentsHmrCancellation": false,
       "staticGenerationMaxConcurrency": 8,
       "staticGenerationMinPagesPerWorker": 25,
       "transitionIndicator": false,
+      "gestureTransition": false,
       "inlineCss": false,
       "useCache": false,
       "globalNotFound": false,
-      "browserDebugInfoInTerminal": false,
+      "browserDebugInfoInTerminal": "warn",
       "lockDistDir": true,
-      "isolatedDevBuild": true,
       "proxyClientMaxBodySize": 10485760,
       "hideLogsAfterAbort": false,
       "mcpServer": true,
       "turbopackFileSystemCacheForDev": true,
-      "turbopackFileSystemCacheForBuild": false,
-      "turbopackInferModuleSideEffects": false,
+      "turbopackFileSystemCacheForBuild": true,
+      "turbopackInferModuleSideEffects": true,
+      "turbopackPluginRuntimeStrategy": "childProcesses",
+      "turbopackMemoryEvictionMode": "auto",
       "optimizePackageImports": [
         "lucide-react",
         "date-fns",
@@ -287,20 +311,26 @@ self.__SERVER_FILES_MANIFEST={
         "react-icons/vsc",
         "react-icons/wi"
       ],
+      "useCacheTimeout": 54,
+      "instantInsights": {
+        "validationLevel": "warning"
+      },
       "trustHostHeader": false,
       "isExperimentalCompile": false
     },
     "htmlLimitedBots": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts",
+    "repoRoot": "/mnt/c/Users/halzi/Desktop/sna-app",
     "turbopack": {
-      "root": "/mnt/c/Users/halzi/Desktop"
+      "root": "/mnt/c/Users/halzi/Desktop/sna-app"
     },
     "distDirRoot": ".next"
   },
-  "appDir": "/mnt/c/Users/halzi/Desktop/my-app/my-app",
-  "relativeAppDir": "my-app/my-app",
+  "appDir": "/mnt/c/Users/halzi/Desktop/sna-app",
+  "relativeAppDir": "",
   "files": [
+    ".next/package.json",
     ".next/routes-manifest.json",
     ".next/server/pages-manifest.json",
     ".next/build-manifest.json",
@@ -312,6 +342,7 @@ self.__SERVER_FILES_MANIFEST={
     ".next/app-path-routes-manifest.json",
     ".next/server/server-reference-manifest.js",
     ".next/server/server-reference-manifest.json",
+    ".next/server/prefetch-hints.json",
     ".next/BUILD_ID",
     ".next/server/next-font-manifest.js",
     ".next/server/next-font-manifest.json",

@@ -9,7 +9,7 @@ __turbopack_context__.v((parentImport) => {
   "server/chunks/ssr/node_modules_arktype_out_12wlkol._.js",
   "server/chunks/ssr/node_modules_@prisma_orm-target-postgres_dist_188eb21._.js",
   "server/chunks/ssr/node_modules_temporal-polyfill_1__j0_a._.js",
-  "server/chunks/ssr/[root-of-the-server]__0z3ix44._.js",
+  "server/chunks/ssr/[root-of-the-server]__0hxejcv._.js",
   "server/chunks/ssr/[root-of-the-server]__04--fcc._.js"
 ].map((chunk) => __turbopack_context__.l(chunk))).then(() => {
         return parentImport("[project]/src/prisma/list.ts [app-rsc] (ecmascript)");

@@ -1,20 +1,26 @@
 import { db } from "./db.ts";
-import { seed } from "./seed.ts";
 
 export { db };
 
-export async function listPlantsSNAs() {
-  await seed();
-  const plants = await db.orm.public.Plant.select("id", "email", "username", "name", "createdAt").all();
-  const snas = await db.orm.public.SNA.select("id", "name", "description", "createdAt").all();
+export type StarterUser = {
+  id: string;
+  email: string | null;
+  username: string | null;
+  name: string | null;
+  createdAt: string | null;
+};
 
-  return users.map((user) => ({
-    id: String(user.id),
-    email: user.email,
-    username: user.username ?? null,
-    name: user.name ?? null,
-    createdAt: user.createdAt,
-  }));
+export async function listPlantsSNAs(): Promise<StarterUser[]> {
+  try {
+    const plants = await db.orm.public.Plant.all();
+    return plants.map((plant: any) => ({
+      id: String(plant.id),
+      email: plant.family ?? null,
+      username: plant.scientificName ?? null,
+      name: plant.commonName ?? plant.scientificName ?? "Unnamed Plant",
+      createdAt: plant.createdAt ?? null,
+    }));
+  } catch {
+    return [];
+  }
 }
-
-export type StarterUser = Awaited<ReturnType<typeof listPlantsSNAs>>[number];

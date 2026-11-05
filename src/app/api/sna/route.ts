@@ -2,7 +2,7 @@ import { db } from "../../../prisma/db";
 import { NextResponse } from 'next/server';
 
 
-export default function handler(req, res) {
+export default function handler(req: any, res: any) {
   if (req.method === 'GET') {
       return GET()
   } else {
@@ -17,13 +17,13 @@ export async function GET() {
 }
 
 // list of all SNAS
-const snas = await db.orm.public.SNA.all();
+// const snas = await db.orm.public.SNA.all();
 
 // list of plants at a given SNA
-const plantsatSNA = await db.orm.public.SNA.where({ id: '01941f29-7c00-73e4-a310-744d2167fc5b' }).include("snaPlants").all();
+// const plantsatSNA = await db.orm.public.SNA.where({ id: '01941f29-7c00-73e4-a310-744d2167fc5b' }).include("plants").all();
 
 // list of SNAs for a given plant
-const snasForPlant = await db.orm.public.Plant.where({ id: '01941f29-7c00-73e4-a310-744d2167fc5b' }).include("snas").all();
+// const snasForPlant = await db.orm.public.Plant.where({ id: '01941f29-7c00-73e4-a310-744d2167fc5b' }).include("snas").all();
 
 async function getSNAs() {
   try {

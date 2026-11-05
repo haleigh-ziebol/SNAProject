@@ -1,4 +1,5 @@
 import SearchBar from "./searchbar.tsx";
+import type { StarterUser } from "../prisma/list.ts";
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
@@ -40,7 +41,7 @@ export default async function Home() {
           <p className="empty">No users found.</p>
         ) : (
           <ul className="users">
-            {users.map((user) => (
+            {users.map((user: StarterUser) => (
               <li key={user.id}>
                 <div>
                   <strong>{user.name ?? "Unnamed user"}</strong>
