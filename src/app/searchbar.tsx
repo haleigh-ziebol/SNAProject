@@ -1,15 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { searchItems, type Item, type ItemType } from "./actions";
 
-type ItemType = "PLANT" | "AREA";
-
-type Item = {
-  id: string;
-  name: string;
-  description: string | null;
-  type: ItemType;
-};
 
 export default function SearchBar() {
   const [query, setQuery] = useState("");
@@ -17,48 +10,30 @@ export default function SearchBar() {
   const [results, setResults] = useState<Item[]>([]);
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    const controller = new AbortController();
+    useEffect(() => {
+    let ignore = false;
 
     const timeout = setTimeout(async () => {
       try {
         setLoading(true);
-
-        const params = new URLSearchParams();
-
-        if (query.trim()) {
-          params.set("q", query.trim());
+        const data = await searchItems(query, type);
+        if (!ignore) {
+          setResults(data);
         }
-
-        if (type) {
-          params.set("type", type);
-        }
-
-        const response = await fetch(
-          `/api/search?${params.toString()}`,
-          {
-            signal: controller.signal,
-          }
-        );
-
-        if (!response.ok) {
-          throw new Error("Search failed");
-        }
-
-        const data: Item[] = await response.json();
-        setResults(data);
       } catch (error) {
-        if ((error as Error).name !== "AbortError") {
+        if (!ignore) {
           console.error(error);
         }
       } finally {
-        setLoading(false);
+        if (!ignore) {
+          setLoading(false);
+        }
       }
     }, 250);
 
     return () => {
+      ignore = true;
       clearTimeout(timeout);
-      controller.abort();
     };
   }, [query, type]);
 
@@ -80,7 +55,6 @@ export default function SearchBar() {
           }
           className="rounded-lg border px-3"
         >
-          <option value="">All</option>
           <option value="PLANT">Plants</option>
           <option value="AREA">Areas</option>
         </select>

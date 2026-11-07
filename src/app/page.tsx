@@ -12,7 +12,7 @@ export default async function Home() {
       <div className="hero">
         <p className="eyebrow">SNA Plant Search</p>
 
-        <h1>Search for plants at SNAs (Scientific and Natural Area) in Minnesota</h1>
+        <h1>Search for plants at SNAs (Scientific and Natural Areas) in Minnesota</h1>
         <p className="lede">
           Find a plant list for a given SNA or a list of SNAs to visit to see a given plant. The data is sourced from the Minnesota DNR's SNA database and is updated periodically.
         </p>
@@ -37,7 +37,7 @@ export default async function Home() {
             then refresh.
           </p>
         ) : snas.length === 0 ? (
-          <p className="empty">No users found.</p>
+          <p className="empty">No snas found.</p>
         ) : (
           <ul className="users">
             {snas.map((user: StarterUser) => ( //update types here to match SNA
